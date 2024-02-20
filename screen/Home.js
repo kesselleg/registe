@@ -46,7 +46,7 @@ export const Home=()=>{
             </View>
             <View>
             <View style={styles.opacityCircle}>
-            <Entypo name='star-outlined' color={"green"}/>
+            <Entypo name='star-outlined' color={"green"} />
             </View>
              
         <Text style={{fontWeight:'bold'}}>Watchlist</Text>
@@ -59,28 +59,29 @@ export const Home=()=>{
         </LinearGradient>
       </View>
 
-      <View style={{backgroundColor:'#F4F4F3', borderRadius:40,}}>
+      <View style={{backgroundColor:'#FAF9F8', borderRadius:40, position:'fixed'}}>
         <Text style={{marginTop:10,  marginBottom:10,fontSize:20, fontWeight:'bold', marginLeft:40,}}>Your Wallet</Text>
         <ScrollView horizontal={true}>
         <View style={{flexDirection:'row', display:'flex',}}>
-       <View style={{flexDirection:'column', display:'flex', backgroundColor:'white', width:240, height:120, borderRadius:20,  marginLeft:30,gap:10,}}>
+       <View style={{flexDirection:'column', display:'flex', backgroundColor:'white', width:240, height:134, borderRadius:20,  marginLeft:30,gap:10,}}>
        <Text style={{color:'gray', marginLeft:40, marginTop:10}}>Neo</Text>
+       
         <View style={{flexDirection:'row', display:'flex',    
         justifyContent:'space-around',}}> 
-        <Text style={{fontWeight:'bold', fontSize:16,}}> NEO 0.2124</Text>
+        <Text style={{fontWeight:'bold', fontSize:16, marginTop:15, paddingLeft:10,}}> NEO 0.2124</Text>
         <View style={{ width: 50,
         height: 50,
         borderRadius: 25,
         backgroundColor: '#D1EECA',
         alignItems: 'center',
         justifyContent: 'center',}}>
-        <Entypo name='star-outlined' color={'#75C285'}  style={{fontSize:20}}/>
+        <Icon name="table" color={'#75C285'}  style={{fontSize:20}}/>
         </View>
         
         </View>
 
         <View style={{flexDirection:'row', display:'flex',    
-        justifyContent:'space-around', marginBottom:40, marginHorizontal:13, }}>
+        justifyContent:'space-around', marginBottom:50, marginHorizontal:13, }}>
         <Text style={{fontWeight:'bold', fontSize:18,}}>$32,128.80</Text>
         <View style={{flexDirection:'row', display:'flex',    
         }}>
@@ -91,17 +92,25 @@ export const Home=()=>{
         </View>
 
         </View>
-
-        <View style={{flexDirection:'column', display:'flex', backgroundColor:'white', width:240, height:120, borderRadius:20,  marginLeft:30,gap:10,}}>
+        <View style={{flexDirection:'column', display:'flex', backgroundColor:'white', width:240, height:134, borderRadius:20,  marginLeft:30,gap:10,}}>
        <Text style={{color:'gray', marginLeft:40, marginTop:10}}>Neo</Text>
+       
         <View style={{flexDirection:'row', display:'flex',    
         justifyContent:'space-around',}}> 
-        <Text style={{fontWeight:'bold', fontSize:16,}}> NEO 0.2124</Text>
-        <Entypo name='star-outlined' color={'green'} style={{backgroundColor:'green'}}/>
+        <Text style={{fontWeight:'bold', fontSize:16, marginTop:15, paddingLeft:10,}}> NEO 0.2124</Text>
+        <View style={{ width: 50,
+        height: 50,
+        borderRadius: 25,
+        backgroundColor: '#D1EECA',
+        alignItems: 'center',
+        justifyContent: 'center',}}>
+        <Icon name='table' color={'#75C285'}  style={{fontSize:20}}/>
+        </View>
+        
         </View>
 
         <View style={{flexDirection:'row', display:'flex',    
-        justifyContent:'space-around', marginBottom:40, marginHorizontal:13, }}>
+        justifyContent:'space-around', marginBottom:50, marginHorizontal:13, }}>
         <Text style={{fontWeight:'bold', fontSize:18,}}>$32,128.80</Text>
         <View style={{flexDirection:'row', display:'flex',    
         }}>
@@ -172,22 +181,34 @@ export const Home=()=>{
             
             <View  style={{flexDirection:'row', display:'flex',gap:194}}>
                 
-                <Text  style={{fontSize:18, color:'#ABACB7'}}>BTC</Text>
+                <Text  style={{fontSize:18, color:'#ABACB7'}}>BCN</Text>
                 <View style={{flexDirection:'row', display:'flex',    
         }}>
-                <Icon name='angle-down'/>
+                <Icon name='angle-down' style={{Color:'red'}}/>
                 <Text style={{color:'#A3A3AF', fontSize:16}}>2.5%</Text>
                 </View>
                 </View>
                 </View>
             </View>
-            <View style={styles.socialicon}>
+            <View style={styles.socialicons}>
+        <TouchableOpacity>
+      <Icon name="home" type="font-awesome" size={30} color="#D9D8D7" style={styles.socialicon}/>
+      </TouchableOpacity>
+
+      <TouchableOpacity>
+      <Icon name="bar-chart" type="font-awesome" size={30} color="#D9D8D7" style={styles.socialicon}/>
+      </TouchableOpacity>
       
-      <Icon name='user'/>
-      <Icon name='user'/>
-      <Icon name='user'/>
-      <Icon name='user'/>
-     </View>
+      <TouchableOpacity>
+      <Icon name="book" type="font-awesome" size={30} color="#D9D8D7" style={styles.socialicon}/>
+      </TouchableOpacity>
+      
+      <TouchableOpacity>
+      <Icon name="file-text" type="font-awesome" size={30} color="#D9D8D7" style={styles.socialicon}/>
+      </TouchableOpacity>
+
+
+      </View>
         </View>
        
       
@@ -215,7 +236,7 @@ navbar:{
    flexDirection:'column',
    display:'flex',
    
-   height:180,
+   height:200,
 
     
 
@@ -223,6 +244,7 @@ navbar:{
 
     hometext:{
          marginBottom:20,
+         marginTop:20,
         fontSize:30,
         fontWeight:'bold',
         marginLeft:34,
@@ -233,6 +255,7 @@ navbar:{
         flexDirection:'row',
         display:'flex',    
         justifyContent:'space-around',
+        
      },
 
      texts:{
@@ -251,6 +274,7 @@ navbar:{
         alignItems: 'center',
         justifyContent: 'center',
         marginRight: 10,
+        fontSize:20,
         
       },
       footer:{
@@ -267,6 +291,27 @@ navbar:{
         flexDirection:'row',
         display:'flex',
         marginHorizontal:200,
+    },
+
+    socialicons:{
+        backgroundColor:'white',
+        flexDirection:'row',
+        display:'flex',
+        
+        gap:60,
+        marginBottom:80,
+       height:100,
+        width:500,
+        borderRadius:20,
+        paddingBottom:10,
+        paddingTop:20,
+        paddingLeft:60,
+        
+       
+    },
+    socialicon:{
+        
+        
     }
      
 
