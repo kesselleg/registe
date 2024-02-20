@@ -46,7 +46,7 @@ export const Login=({navigation})=>{
         <TouchableOpacity   onPress={() =>
         navigation.navigate('register')
       }>
-          <Text style={styles.btntext} >Login</Text>
+          <Text style={styles.btntext} >Loin</Text>
           </TouchableOpacity>
       </View>
      
